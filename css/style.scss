@@ -1,0 +1,55 @@
+---
+---
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4vw;
+	overflow-x: hidden;
+}
+
+@media only screen and (min-width: 460px) {
+	body {
+		font-size: 20px;
+	}
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+	font-weight: 500;
+}
+
+h5 {
+	font-weight: 400;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.image {
+	margin: 0 auto;
+}
+
+.footer {
+	margin: 0 auto;
+	padding-bottom: 4%;
+	padding-top: 8%;
+	text-align: right;
+	width: 90%;
+}
+
+.content {
+	margin: 0 auto;
+	overflow-x: hidden;
+	width: 90%;
+}
+
+.page-title {
+	margin: 0 auto;
+	padding-bottom: 4%;
+	padding-top: 4%;
+	width: 90%;
+}

@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Post</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" 
+		href="{{ '/css/style.css' | prepend: site.github.url }}">
+	<link rel="stylesheet" type="text/css" 
+		href="{{ '/css/post.css' | prepend: site.github.url }}">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="page-title"><h1>Every Day Blog</h1></header>
+		<section class="content">
+			<h2>{{ page.title }}</h2>
+			{{ page.content }} 
+		</section>
+		{% include footer.html %}
+	</div>
+</body>
+</html>

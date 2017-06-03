@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" 
+		href="{{ '/css/style.css' | prepend: site.github.url }}">
+	<link rel="stylesheet" type="text/css" 
+		href="{{ '/css/home.css' | prepend: site.github.url }}">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="page-title"><h1>Every Day Blog</h1></header>
+		<section class="content">
+			<div>about creating new digital 
+				things and sharing them online</div>
+			<!-- <div class="image"><img src="img/octojekyll.png" /></div> -->
+			{% for post in site.posts %}
+				<h3>
+					{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+				</h3>
+			{% endfor %}
+			<!-- Future posts placeholder -->
+			<h3>
+				2017-05-29: <a href="#">This plugin</a>
+			</h3>
+			<h3>
+				2017-05-29: <a href="#">This library</a>
+			</h3>
+			<h3>
+				2017-05-29: <a href="#">This experiment</a>
+			</h3>
+			<h3>
+				2017-05-29: <a href="#">This thing</a>
+			</h3>
+		</section>
+		{% include footer.html %}
+	</div>
+</body>
+</html>
