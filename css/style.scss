@@ -4,6 +4,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 4vw;
+	line-height: 1.6;
 	overflow-x: hidden;
 }
 
@@ -22,6 +23,11 @@ h4 {
 
 h5 {
 	font-weight: 400;
+}
+
+ol {
+	padding-bottom: 2%;
+	margin-top: -1em;
 }
 
 .wrapper {
@@ -49,7 +55,7 @@ h5 {
 
 .page-title {
 	margin: 0 auto;
-	padding-bottom: 4%;
-	padding-top: 4%;
+	padding-bottom: 0%;
+	padding-top: 2%;
 	width: 90%;
 }
