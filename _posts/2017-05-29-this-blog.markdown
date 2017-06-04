@@ -8,7 +8,7 @@ permalink: /this-blog/
 Where I set up this blog using Jekyll
 
 ### Nice start!
-![Alt text]({{ '/img/a_good_start_edit.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/a_good_start_edit.png' }})
 
 ### First hiccup
 ![Alt text]({{ '/img/first_hickup_edit.png' | prepend: site.github.url }})
@@ -38,6 +38,19 @@ Where I set up this blog using Jekyll
 
 ### 6/1 Blog live
 Seamless integration
+
+
+### 6/2 Custom domain name
+From USERNAME.github.io to kalimfleet.net
+
+
+### 6/3 Https
+Since (at the time of this writing) Github does not offer free https for hosted content
+using a custom domain, I set it up - may take up to 24 hours
+
+### 6/4/ Confirm Https
+That's it folks. Blog is all ready to go. Now it's time to create digital things and write about my experience
+here. I hope you learn as much as I do on this journey.
 
 #### Resources:
 More about [Minima Theme][minima-theme]
