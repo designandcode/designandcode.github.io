@@ -4,9 +4,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" 
-		href="{{ '/css/style.css' | prepend: site.github.url }}">
+		href="{{ '/css/style.css' }}">
 	<link rel="stylesheet" type="text/css" 
-		href="{{ '/css/home.css' | prepend: site.github.url }}">
+		href="{{ '/css/home.css' }}">
 </head>
 <body>
 	<div class="wrapper">
@@ -17,7 +17,7 @@
 			<!-- <div class="image"><img src="img/octojekyll.png" /></div> -->
 			{% for post in site.posts %}
 				<h3>
-					{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+					{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
 				</h3>
 			{% endfor %}
 			<!-- Future posts placeholder -->

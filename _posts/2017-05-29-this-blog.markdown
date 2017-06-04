@@ -11,29 +11,29 @@ Where I set up this blog using Jekyll
 ![Alt text]({{ '/img/a_good_start_edit.png' }})
 
 ### First hiccup
-![Alt text]({{ '/img/first_hickup_edit.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/first_hickup_edit.png' }})
 
 ### Sudo is a bad idea
-![Alt text]({{ '/img/jekyll_out_edit.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/jekyll_out_edit.png' }})
 
 ### 6 hours later...
-![Alt text]({{ '/img/blog_proof_edit.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/blog_proof_edit.png' }})
 
 ### 5/30 - Overriding Minima theme is relatively simple
-![Alt text]({{ '/img/layouts_home.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/layouts_home.png' }})
 1.		create folder _layouts
 2.		create css folder in root that will be copied (and compiled if using sass) into _site/css
 3.		create img folder in root that will be copied to _site/img
 4.		create a folder _includes for ... includes :)
 
 ### ...And here is the code for the post!
-![Alt text]({{ '/img/layouts_post.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/layouts_post.png' }})
 
 
 ### 5/31 Blog Home and Post
-![Alt text]({{ '/img/minimal_blog.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/minimal_blog.png' }})
 
-![Alt text]({{ '/img/minimal_post.png' | prepend: site.github.url }})
+![Alt text]({{ '/img/minimal_post.png' }})
 
 
 ### 6/1 Blog live
