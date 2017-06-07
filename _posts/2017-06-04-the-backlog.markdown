@@ -17,4 +17,10 @@ Please check back here from time to time and see what I'm up to. I hope you are 
 Actually, I will happily accept even moderate excitement on your part :)
 
 ### The List
-*Goes Here*
+{% for post in site.posts %}
+{% if post.type == 'experiment' %}
+<h3>
+{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+</h3>
+{% endif %}
+{% endfor %}
