@@ -52,6 +52,13 @@ using a custom domain, I set it up - may take up to 24 hours
 That's it folks. Blog is all ready to go. Now it's time to create digital things and write about my experience
 here. I hope you learn as much as I do on this journey.
 
+### 6/6 Post type
+Posts now have a type attribute so I can create lists of posts filtered by type
+
+![Alt text]({{ '/img/post_type1.png' }})
+
+![Alt text]({{ '/img/post_type2.png' }})
+
 #### Resources:
 More about [Minima Theme][minima-theme]
 [Markdown: Syntax][markdown-syntax]
