@@ -12,6 +12,11 @@ To solve a common problem I have online I am creating a Google Chrome Extension 
 When activated, the extension will update the page to show all the DOM nodes that can be captured
 as a screenshot. Here are screenshots of early development version.
 
+### 6/14 [Plugin on Github][github-link]
+Prior to release I would like to get this peer reviewed and do User Acceptance
+Testing. Ideally, I would like to observe people using the plug-in and address 
+any major issues they are having with the experience.
+
 ### 6/12 Release Candidate
 Today I will begin the process of publishing this extension to the Chrome Web Store. Since beginning
 development, I have learned quite a few things about developing this plugin and Chrome extensions in
@@ -45,11 +50,12 @@ Content_scripts but don't have direct acceess to them (Sandboxing).
 ![Alt text]({{ '/img/domcapture_early5.png' }})
 
 #### Resources:
-More about [Chrome Developer Guide][chrome-dev]
-[Basic Extension Template][make-red]
-[Communicating With Webpages][cross-origin]
-[Helpful resource][helpful-resource]
-[Publish On Chrome Store][chrome-publish]
+More about 
+*[Chrome Developer Guide][chrome-dev]
+*[Basic Extension Template][make-red]
+*[Communicating With Webpages][cross-origin]
+*[Helpful resource][helpful-resource]
+*[Publish On Chrome Store][chrome-publish]
 
 
 [chrome-dev]: https://developer.chrome.com/extensions/devguide
@@ -57,3 +63,4 @@ More about [Chrome Developer Guide][chrome-dev]
 [cross-origin]: https://stackoverflow.com/questions/4976996/chromes-tabs-executescript-passing-parameters-and-using-libraries#answer-4979785
 [helpful-resource]: https://robots.thoughtbot.com/how-to-make-a-chrome-extension
 [chrome-publish]: https://developer.chrome.com/webstore/publish
+[github-link]: https://github.com/designandcode/DOMCapture
