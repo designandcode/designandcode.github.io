@@ -5,6 +5,7 @@ date:   2017-06-06 18:29:51 -0400
 categories: jekyll update
 permalink: /chrome-extension/
 type: experiment
+description: DOMCapture is a chrome extension for easily taking screenshots of DOM nodes
 ---
 ## DOMCapture - Chrome Extension
 

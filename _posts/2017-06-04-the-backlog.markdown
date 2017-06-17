@@ -4,6 +4,7 @@ title:  "The Backlog"
 date:   2017-06-04 18:29:51 -0400
 categories: jekyll update
 permalink: /the-backlog/
+description: Sharing my experience learning development while I create something new every day
 ---
 As part of my personal commitment to create digital things online every day I will continuously update this page
 to reflect the things I am working on. In addition to creating things, I want to get better at 

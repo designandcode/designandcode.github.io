@@ -4,6 +4,7 @@ title:  "This Blog"
 date:   2017-05-29 14:04:51 -0400
 categories: jekyll update
 permalink: /this-blog/
+description: Setting up the blog that will help me easily put my thoughts online
 ---
 Where I set up this blog using Jekyll
 
