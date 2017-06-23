@@ -4,7 +4,6 @@ title:  "The Breaks"
 date:   2017-06-16 18:29:51 -0400
 categories: jekyll update
 permalink: /the-breaks/
-type: experiment
 description: These are the times a took I break from my goal of creating something everyday
 ---
 These are the times I took a break from my goal of creating something every day. 
