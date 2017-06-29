@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-	<title>Post</title>
+	<title>Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" 
-		href="{{ '/css/style.css' }}">
+		href="/css/style.css">
 	<link rel="stylesheet" type="text/css" 
-		href="{{ '/css/post.css' }}">
+		href="/css/home.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -16,8 +16,7 @@
 			{% include nav.html %}	
 		</header>
 		<section class="content">
-			<h2>{{ page.title }}</h2>
-			{{ page.content }} 
+			{{content}}
 		</section>
 		{% include footer.html %}
 	</div>

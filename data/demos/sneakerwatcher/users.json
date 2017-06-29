@@ -1,0 +1,5 @@
+[
+  {"id": 1, "firstName": "Foo", "lastName": "Bar", "email": "fakeuser@example.com", "permissions": {"show": 2, "view": 2, "edit": 2, "delete": 2, "create": 2}},
+  {"id": 2, "firstName": "Sue", "lastName": "Baz", "email": "suezer@example.com", "permissions": {"show": 2, "view": 2, "edit": 1, "delete": 0}},
+  {"id": 3, "firstName": "Blah", "lastName": "Foo", "email": "blahblah@example.com", "permissions": null}
+]
