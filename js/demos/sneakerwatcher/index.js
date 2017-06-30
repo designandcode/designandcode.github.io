@@ -1,23 +1,7 @@
----
-title: "SneakerWatcher Demo"
-permalink: /demos/sneakerwatcher/
-assets: demos/sneakerwatcher
----
-<!doctype html>
-<html>
-<head>
-	<title>Home</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" 
-		href=" /css/{{ page.assets }}/foundation.css ">
-	<link rel="stylesheet" type="text/css" 
-		href=" /css/{{ page.assets }}/index.css ">
-</head>
-<body>
-	<h2>SneakerWatcher Demo</h2>
-	<pre>
-		sneakers.json
-		[
+(function (window, _) {
+	var demo = 'sneakerwatcher',
+	data =  {
+		sneakers: [
 	  	{"name": "Yeezy 750 x Kanye West", "brand": "Adidas", "series": ["750"]},
 	  	{"name": "Air Max 90", "brand": "Nike", "series": ["Air Max", "Air Max 90"]},
 	  	{"name": "Nike Kyrie 1 \"All-Star\"", "brand": "Nike", "series": ["Nike Kyrie 1", "Nike Kyrie 1"]},
@@ -32,29 +16,27 @@ assets: demos/sneakerwatcher
 	  	{"name": "4 retro \"Oreo\"", "brand": "Air Jordan", "series": ["Air Jordan", "Air Jordan 4", "Air Jordan Retro", "Air Jordan Oreo"]},
 	  	{"name": "BREAKPOINT OX \"SOLEBOX\"", "brand": "Converse", "series": [""]},
 	  	{"name": "GEL LYTE V \"TAILOR PACK\"", "brand": "Asics", "series": ["Asics Gel Lyte", "Asics Gel Lyte V"]}
-		]
-		
-		users.json
-		[
+		],
+		users: [
 		  {"id": 1, "firstName": "Foo", "lastName": "Bar", "email": "fakeuser@example.com", "permissions": {"show": 2, "view": 2, "edit": 2, "delete": 2, "create": 2}},
 		  {"id": 2, "firstName": "Sue", "lastName": "Baz", "email": "suezer@example.com", "permissions": {"show": 2, "view": 2, "edit": 1, "delete": 0}},
 		  {"id": 3, "firstName": "Blah", "lastName": "Foo", "email": "blahblah@example.com", "permissions": null}
 		]
-	</pre>
-	
-	<div class="search">
-		<!-- filter the sneakers from the sneakers.json -->
-		<input type="text" id="search-input" class="input" />
-	</div>
+	},
+	templates = {
+		sneakers: {
+			data: data.sneakers,
+			item: _.template('<li><%= name %></li>'),
+			el: document.querySelector('#sneakers'),
+			render: function () {
+				var html = this.data.forEach( c => {
+					this.el.innerHTML += this.item(c);
+				});
+			}
+		}
+		
+	};
 
-	<div>
-		<h3>Images</h3>
-		<ul id="sneakers">
-			<li><img src="/img/{{ page.assets }}/black-blue-9-600.jpg"></li>
-			<li><img src="/img/{{ page.assets }}/sport-blue-6-600.jpg"></li>
-		</ul>
-	</div>
-	<script type="text/javascript" src=" /js/{{ page.assets }}/underscore.js "></script>
-	<script type="text/javascript" src=" /js/{{ page.assets }}/index.js "></script>
-</body>
-</html>
+	templates.sneakers.render();
+	
+}(this, _, undefined));
