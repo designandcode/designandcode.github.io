@@ -10,7 +10,7 @@ body {
 
 @media only screen and (min-width: 460px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
@@ -59,6 +59,11 @@ footer {
 	padding-top: 2%;
 	position: relative;
 	width: 90%;
+}
+
+.content,
+.page-title {
+	max-width: 680px;
 }
 
 @media screen and (min-width: 480px) {

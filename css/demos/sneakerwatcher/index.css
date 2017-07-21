@@ -1,4 +1,156 @@
 body {
-	background: black;
+	background: #000000;
+	/*background: #dcdcdc;*/
 	color: white;
+}
+
+
+.select span:after {
+	content: 'Watch +';
+}
+
+.select.watchlist span:after {
+	bottom: 0;
+	content: 'Unwatch -';
+	left: 0;
+	position: absolute:;
+	right: 0;
+	top: 0;
+}
+
+.wrapper {
+	clear: both;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.container {
+	margin-left: 10px;
+	width: 96%;
+}
+
+@media screen and (min-width: 880px) {
+	.container {
+		margin-left: 20px;
+	}
+}
+
+.sneakers-container,
+.watchlist-container {
+	list-style: none;
+}
+
+.sneakers-container img {
+	float: left;
+	margin: 5px 10px 5px 0;
+	width: 100px;
+}
+
+/*.sneakers-container .select,*/
+.watchlist-container .select {
+	float: left;
+	margin: 10px;
+	position: relative;
+	width: calc(100% - 20px);
+}
+
+.sneakers-container .select {
+	clear: both;
+	margin: 0 auto;
+	width: 92%;
+}
+
+/*.sneakers-container .select:before,*/
+.watchlist-container .select:before {
+  display: block;
+  content: "";
+  padding-top: 83%;
+  width: 100%;
+}
+
+/*.sneakers-container .select img,*/
+.watchlist-container .select img {
+    bottom: 0;
+		height: 82%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+		width: 100%;
+}
+
+/*.sneakers-container .select span,*/
+.watchlist-container .select span {
+		background-color: #008cba;
+    bottom: 0;
+		display: block;
+    left: 0;
+		padding: 5%;
+    position: absolute;
+		text-align: center;
+		width: 100%;
+}
+
+.sneakers-container .select span {
+	display: block;
+}
+
+/*.sneakers-container .select.watchlist span,*/
+.watchlist-container .select.watchlist span {
+	background-color: #eaeaea;
+	color: #000000;
+}
+
+/*.sneakers-container .select a,*/
+.watchlist-container .select a {
+		background-color: rgba(0, 0, 0, 0.3);
+    bottom: 18%;
+		color: #ffffff;
+		display: block;
+    left: 0;
+		padding: 10px;
+    position: absolute;
+		width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+	/*.sneakers-container .select,*/
+	.watchlist-container .select {
+		width: calc(50% - 20px);
+	}
+}
+
+@media screen and (min-width: 880px) {
+	/*.sneakers-container .select,*/
+	.watchlist-container .select {
+		width: calc(33% - 20px);
+	}
+}
+
+.sneaker-page {
+	width: 100%;
+}
+
+.sneaker-page img {
+	display: block;
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 90%;
+}
+
+.search .input {    
+	display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.search-wrapper {
+	position: relative;
+}
+
+.sneakers-container {
+  background: rgba(0, 0, 0, 0.8);
+	left: 0%;
+	position: absolute;
+  z-index: 1;
 }

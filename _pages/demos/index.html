@@ -4,3 +4,11 @@ permalink: /demos/
 ---
 
 <h1>Demos</h1>
+{% for page in site.pages %}
+	{% if page.type == "demo" %}
+	<h3>
+	 <a href="{{ page.url }}">{{ page.title }}</a>
+	</h3>
+	<div>{{ post.description }}</div>
+	{% endif %}
+{% endfor %}

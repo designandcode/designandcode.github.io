@@ -1,7 +1,10 @@
 <nav class="nav-pages">
 	<ul>
-		<li> / first</li>
-		<li> / second</li>
-		<li>/ <a href="/demos/"> demos </a></li>
+		<!-- <li> / first</li>
+		<li> / second</li> -->
+		{% comment %} site.navPages is set in config.rb {% endcomment %}
+		{% for navPage in site.navPages %}
+		<li>/ <a href="/{{navPage}}/"> {{navPage}} </a></li>
+		{% endfor %}
 	</ul>		
 </nav>	

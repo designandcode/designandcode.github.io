@@ -1,0 +1,103 @@
+---
+---
+
+
+img {
+	width: 100%;
+}
+
+.portfolio a {
+	background-color: #f3f5f6;
+	color: #676767;
+}
+
+.portfolio a:visited {
+	color: #8577c7;
+}
+
+.portfolio h3 a {
+	background-color: transparent;
+}
+
+.image {
+	max-width: 400px;
+}
+
+h1 {
+	margin-bottom: 0;
+}
+
+h3 {
+	margin-bottom: 0.25em;
+}
+
+p {
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-bottom: 1.2em;
+}
+
+.content,
+.page-title {
+	max-width: 780px;
+}
+
+.block {
+	display: block;
+}
+
+.break-maybe {
+	display: inline-block;
+}
+
+.clear {
+	clear: both;
+	padding-top: 30px;
+}
+
+.clear.images {
+	padding-top: 50px;
+}
+
+.video {
+	float: none;
+	margin-right: 0;
+	max-width: 326px;
+	width: 100%;
+}
+
+@media screen and (min-width: 654px) {
+	.video {
+		float: left;
+		margin-right: 40px;
+	}
+}
+
+.smaller-images .image {
+	float: left;
+	height: auto;
+	max-width: 326px;
+	overflow: hidden;
+	padding-top: 20px;
+	width: 100%;
+}
+
+.smaller-images img {
+	width: 100%;
+}
+
+@media screen and (min-width: 740px) {
+	.smaller-images .image {
+		height: 133px;
+		width: 285px;
+	}
+
+	.smaller-images img {
+		width: 110%;
+	}
+}
+
+.larger-images {
+	clear: both;
+	padding-top: 30px;
+}

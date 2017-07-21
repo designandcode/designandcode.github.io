@@ -14,7 +14,10 @@ work on next.
 ### Streaks of Creating Daily
 
 <pre>
-  6/16/17  -  
+  6/16/17  -  7/7/17    22 days
+   * Adding Demos section to blog
+   * Blog styling updates
+   * Sneakerwatcher Demo
   5/29/17  -  6/15/17   18 days
    * DOMCapture
 </pre>

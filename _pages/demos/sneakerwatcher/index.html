@@ -1,7 +1,9 @@
 ---
-title: "SneakerWatcher Demo"
+title: Watchlist
 permalink: /demos/sneakerwatcher/
 assets: demos/sneakerwatcher
+description: A lightweight web app for tracking your favorite things online
+type: demo
 ---
 <!doctype html>
 <html>
@@ -14,45 +16,42 @@ assets: demos/sneakerwatcher
 		href=" /css/{{ page.assets }}/index.css ">
 </head>
 <body>
-	<h2>SneakerWatcher Demo</h2>
-	<pre>
-		sneakers.json
-		[
-	  	{"name": "Yeezy 750 x Kanye West", "brand": "Adidas", "series": ["750"]},
-	  	{"name": "Air Max 90", "brand": "Nike", "series": ["Air Max", "Air Max 90"]},
-	  	{"name": "Nike Kyrie 1 \"All-Star\"", "brand": "Nike", "series": ["Nike Kyrie 1", "Nike Kyrie 1"]},
-	  	{"name": "ZX Flux", "brand": "Adidas", "series": ["ZX", "ZX Flux"]},
-	  	{"name": "Air Foamposite One", "brand": "Nike", "series": ["Air Foamposite", "Air Foamposite One"]},
-	  	{"name": "AIR JORDAN 4 RETRO LS", "brand": "Jordan", "series": ["Air Jordan", "Air Jordan 4", "Air Jordan Retro"]},
-	  	{"name": "Air Jordan 1 Retro Low OG \"Bred\"", "brand": "Jordan", "series": ["Air Jordan", "Air Jordan 1", "Air Jordan 1 Low", "Air Jordan Retro", "Air Jordan OG"]},
-	  	{"name": "Air Jordan 4 Retro \"Oreo\"", "brand": "Jordan", "series": [""]},
-	  	{"name": "Kobe 9 High EXT QT", "brand": "Nike", "series": ["Kobe 9"]},
-	  	{"name": "Air Jordan 20 \"Laser\"", "brand": "Jordan", "series": ["Air Jordan", "Air Jordan 20", "Air Jordan Laser"]},
-	  	{"name": "Air Jordan 10 Retro \"Lady Liberty\"", "brand": "Jordan", "series": ["Air Jordan", "Air Jordan 10", "Air Jordan Retro"]},
-	  	{"name": "4 retro \"Oreo\"", "brand": "Air Jordan", "series": ["Air Jordan", "Air Jordan 4", "Air Jordan Retro", "Air Jordan Oreo"]},
-	  	{"name": "BREAKPOINT OX \"SOLEBOX\"", "brand": "Converse", "series": [""]},
-	  	{"name": "GEL LYTE V \"TAILOR PACK\"", "brand": "Asics", "series": ["Asics Gel Lyte", "Asics Gel Lyte V"]}
-		]
+	<div class="wrapper">
+		<h2>SneakerWatcher Demo</h2>
 		
-		users.json
-		[
-		  {"id": 1, "firstName": "Foo", "lastName": "Bar", "email": "fakeuser@example.com", "permissions": {"show": 2, "view": 2, "edit": 2, "delete": 2, "create": 2}},
-		  {"id": 2, "firstName": "Sue", "lastName": "Baz", "email": "suezer@example.com", "permissions": {"show": 2, "view": 2, "edit": 1, "delete": 0}},
-		  {"id": 3, "firstName": "Blah", "lastName": "Foo", "email": "blahblah@example.com", "permissions": null}
-		]
-	</pre>
-	
-	<div class="search">
-		<!-- filter the sneakers from the sneakers.json -->
-		<input type="text" id="search-input" class="input" />
-	</div>
-
-	<div>
-		<h3>Images</h3>
-		<ul id="sneakers">
-			<li><img src="/img/{{ page.assets }}/black-blue-9-600.jpg"></li>
-			<li><img src="/img/{{ page.assets }}/sport-blue-6-600.jpg"></li>
-		</ul>
+		<!-- Begin #home -->
+		<section data-route="#home">
+			<!-- filter the sneakers from the sneakers.json -->
+			<div class="search-wrapper wrapper">
+				<div id="search" class="search" data-template>
+				</div>
+				<ul id="sneakers" class="sneakers-container container" data-template></ul>
+			</div>	
+			<div class="watchlist-wrapper wrapper">
+				<h3>Images</h3>
+				<ul id="watchlist" class="watchlist-container container" data-template>
+				</ul>
+			</div>
+		</section>
+		<!-- End #home -->
+		<section data-route="#sneaker">
+			<div class="sneaker-page">
+				<div class="search-wrapper search-mini wrapper">
+					<div data-clone data-id="search">
+					</div>
+					<ul data-clone data-id="sneakers"></ul>
+				</div>	
+				<div class="watchlist-wrapper watchlist-mini wrapper">
+					<h3>Images</h3>
+					<ul data-clone data-id="watchlist">
+					</ul>
+				</div>
+				<h3>Home - light</h3>
+				<img src="/img/demos/sneakerwatcher/sneaker_watcher_search_1200.png" alt="Light Theme - Watchlist">
+				<h3>Sneaker - light</h3>
+				<img src="/img/demos/sneakerwatcher/sneaker_watcher_sneaker_1200.png" alt="Light Theme - Sneaker">
+			</div>
+		</section>
 	</div>
 	<script type="text/javascript" src=" /js/{{ page.assets }}/underscore.js "></script>
 	<script type="text/javascript" src=" /js/{{ page.assets }}/index.js "></script>
