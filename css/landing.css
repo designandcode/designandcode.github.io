@@ -107,7 +107,7 @@ p {
 
 	.smaller-images a {
 		bottom: 0;
-		left: 10px;
+		left: 0;
 		position: absolute;
 	}
 }
