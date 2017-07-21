@@ -7,17 +7,18 @@ img {
 }
 
 .portfolio a {
-	background-color: #f3f5f6;
-	color: #676767;
+	background-color: #353535;
+	color: #fff;
+	padding: 2px 7px;
 }
 
 .portfolio a:visited {
-	color: #8577c7;
+	color: #eaeaea;
 }
 
-.portfolio h3 a {
+/*.portfolio h3 a {
 	background-color: transparent;
-}
+}*/
 
 .image {
 	max-width: 400px;
@@ -79,11 +80,18 @@ p {
 	max-width: 326px;
 	overflow: hidden;
 	padding-top: 20px;
+	position: relative;
 	width: 100%;
 }
 
 .smaller-images img {
 	width: 100%;
+}
+
+.smaller-images a {
+	bottom: 0;
+	left: 10px;
+	position: absolute;
 }
 
 @media screen and (min-width: 740px) {
