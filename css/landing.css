@@ -52,12 +52,13 @@ p {
 }
 
 .clear {
-	clear: both;
-	padding-top: 30px;
+	padding: 30px 0;
 }
 
-.clear.images {
-	padding-top: 50px;
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .video {
@@ -88,11 +89,11 @@ p {
 	width: 100%;
 }
 
-.smaller-images a {
+/*.smaller-images a {
 	bottom: 0;
 	left: 10px;
 	position: absolute;
-}
+}*/
 
 @media screen and (min-width: 740px) {
 	.smaller-images .image {
@@ -103,9 +104,19 @@ p {
 	.smaller-images img {
 		width: 110%;
 	}
+
+	.smaller-images a {
+		bottom: 0;
+		left: 10px;
+		position: absolute;
+	}
 }
 
 .larger-images {
 	clear: both;
 	padding-top: 30px;
+}
+
+.larger-images img {
+	width: 100%;
 }
