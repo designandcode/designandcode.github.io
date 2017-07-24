@@ -21,7 +21,17 @@ Actually, I will happily accept even moderate excitement on your part :)
 {% for post in site.posts %}
 {% if post.type == 'experiment' %}
 <h3>
-{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+<a href="{{ post.url }}">{{ post.title }}</a>
 </h3>
+<div>{{ post.description }}</div>
+{% endif %}
+{% endfor %}
+
+{% for page in site.pages %}
+{% if page.type == "demo" %}
+<h3>
+ <a href="{{ page.url }}">{{ page.title }}</a>
+</h3>
+<div>{{ page.description }}</div>
 {% endif %}
 {% endfor %}

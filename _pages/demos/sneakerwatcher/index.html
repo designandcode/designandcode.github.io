@@ -16,19 +16,26 @@ type: demo
 		href=" /css/{{ page.assets }}/index.css ">
 </head>
 <body>
+	<header class="header">
+		<!-- filter the sneakers from the sneakers.json -->
+		<div class="search-wrapper wrapper">
+			<div id="search" class="search" data-template>
+			</div>
+			<ul id="sneakers" class="sneakers-container container" data-template></ul>
+		</div>
+		<div class="watchlist-mini-wrapper wrapper">
+			<button id="expand-watchlist" class="watchlist-mini-expand">Watchlist</button>
+			<ul id="watchlist-mini" class="watchlist-mini-container container" data-template hidden>
+		</div>
+	</header>
 	<div class="wrapper">
-		<h2>SneakerWatcher Demo</h2>
+		<div id="overlay" class="overlay" data-template hidden></div>
+		<!-- <h2>SneakerWatcher Demo</h2> -->
 		
 		<!-- Begin #home -->
 		<section data-route="#home">
-			<!-- filter the sneakers from the sneakers.json -->
-			<div class="search-wrapper wrapper">
-				<div id="search" class="search" data-template>
-				</div>
-				<ul id="sneakers" class="sneakers-container container" data-template></ul>
-			</div>	
 			<div class="watchlist-wrapper wrapper">
-				<h3>Images</h3>
+				<!-- <h3>Images</h3> -->
 				<ul id="watchlist" class="watchlist-container container" data-template>
 				</ul>
 			</div>
@@ -36,19 +43,9 @@ type: demo
 		<!-- End #home -->
 		<section data-route="#sneaker">
 			<div class="sneaker-page">
-				<div class="search-wrapper search-mini wrapper">
-					<div data-clone data-id="search">
-					</div>
-					<ul data-clone data-id="sneakers"></ul>
-				</div>	
-				<div class="watchlist-wrapper watchlist-mini wrapper">
-					<h3>Images</h3>
-					<ul data-clone data-id="watchlist">
-					</ul>
-				</div>
-				<h3>Home - light</h3>
+				<!-- <h3>Home - light</h3> -->
 				<img src="/img/demos/sneakerwatcher/sneaker_watcher_search_1200.png" alt="Light Theme - Watchlist">
-				<h3>Sneaker - light</h3>
+				<!-- <h3>Sneaker - light</h3> -->
 				<img src="/img/demos/sneakerwatcher/sneaker_watcher_sneaker_1200.png" alt="Light Theme - Sneaker">
 			</div>
 		</section>

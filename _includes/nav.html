@@ -4,7 +4,11 @@
 		<li> / second</li> -->
 		{% comment %} site.navPages is set in config.rb {% endcomment %}
 		{% for navPage in site.navPages %}
+		{% if navPage == 'backlog' %}
+		<li>/ <a href="/the-{{navPage}}/"> {{navPage}} </a></li>
+		{% else %}
 		<li>/ <a href="/{{navPage}}/"> {{navPage}} </a></li>
+		{% endif %}
 		{% endfor %}
 	</ul>		
 </nav>	

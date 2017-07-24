@@ -81,7 +81,8 @@
 		//returns filtered collection based on regex
 		if (!phrase) { return collection }
 		var phrasePart = new RegExp(phrase, 'i');
-		return collection.filter( v => v.name.match(phrasePart));
+		//return collection.filter( v => v.name.match(phrasePart));
+		return collection.filter( v => JSON.stringify(v).match(phrasePart));
 	}
 
 	function WatchlistCollection () {
@@ -128,7 +129,7 @@
 
 		let [ watchlistCollection ] = constructor.collections;
 
-		this.el = document.querySelector('#watchlist');
+		this.el = document.querySelector(constructor.el);
 		this.template = _.template(`<li class="select watchlist" data-id="<%= url %>">
 				<img src="/img/demos/sneakerwatcher/<%= img %>" />
 				<a href="#sneaker/<%= url %>"><%= name %></a>
@@ -160,17 +161,17 @@
 			let spans = this.el.querySelectorAll('span');
 			let body = document.querySelector('body');
 
-			body.addEventListener('click', function (e) {
-				if (e.target.nodeName === 'SPAN') {
-					watchlistCollection.remove(e.target.parentNode.dataset.id);
-				}
-			});
-
-			//for (var i = 0; i < spans.length; i++) {
-			//	spans[i].addEventListener('click', function (e) {
+			//body.addEventListener('click', function (e) {
+			//	if (e.target.nodeName === 'SPAN') {
 			//		watchlistCollection.remove(e.target.parentNode.dataset.id);
-			//	});
-			//}
+			//	}
+			//});
+
+			for (var i = 0; i < spans.length; i++) {
+				spans[i].addEventListener('click', function (e) {
+					watchlistCollection.remove(e.target.parentNode.dataset.id);
+				});
+			}
 		}
 
 
@@ -286,7 +287,7 @@
 		let el = document.querySelector('#search');
 
 		let template = _.template(`
-			<input type="text" id="search-input" class="input" placeholder="Search for Kicks" />
+			<input type="search" id="search-input" class="input" placeholder="Search for Kicks" />
 		`);
 
 		let input;
@@ -304,10 +305,15 @@
 		}
 
 		this.bindEvents = function bindEvents (opts) {
-			let [ sneakers, autocomplete ] = opts.bindings;
+			let [ sneakers, overlay ] = opts.bindings;
 			
 			input.addEventListener('keyup', (e) => {
 				sneakers.update('filter', e.target.value);
+				if (e.target.value) {
+					overlay.update({show:true});
+				} else {
+					overlay.update({show:false});
+				}
 			});
 		}
 
@@ -319,6 +325,65 @@
 			set(val);
 		}
 	}
+
+	function Overlay (constructor) {
+		this.el = document.getElementById('overlay');
+
+		this.render = function render(opts) {
+			this.el.hidden = true;
+
+			if (opts.show === true) {
+				this.el.hidden = false;
+			}
+		}
+
+		this.update = function update (opts) {
+			this.render(opts);
+		}
+	}
+
+	// event handlers
+	function expandWatchlistMini (e) {
+		let button = document.getElementById('expand-watchlist');
+		let watchlistMini = document.getElementById('watchlist-mini');
+
+		e.target.classList.toggle('open');
+
+		if (e.target.classList.contains('open')) {
+			watchlistMini.hidden = false;
+		} else {
+			watchlistMini.hidden = true;
+		}
+	}
+
+	function clearSearch (e) {
+		let esc = 27,
+			key = e.keyCode,
+			type = e.type,
+			target = e.target;
+
+
+		if (key && key === esc) {
+			target.value = '';
+		} else if ((type === 'search' && !target.value) || 
+				type === 'click') {
+			//e.target.value = '';
+			// Yuk
+			search.render();
+			sneakers.update('filter', '');
+			overlay.update({show: false});
+		}
+	}
+
+	// events
+	document.getElementById('expand-watchlist').addEventListener('click', expandWatchlistMini);
+	document.getElementById('search').addEventListener('keydown', clearSearch);
+	document.getElementById('search').addEventListener('search', clearSearch);
+	document.getElementsByTagName('body')[0].addEventListener('click', (e) => {
+		if (e.target.hash && e.target.hash.match(/#sneaker/)) {
+			clearSearch(e);
+		}
+	});
 
 	//// Since both of these inits will probably access
 	//// the same sneakers model, we should cache sneakers
@@ -338,9 +403,16 @@
 	const sneakerCollection = api.getCollection('/sneakers');
 	const watchlistCollection = new WatchlistCollection;
 
+	let overlay = new Overlay();
 	
 	let watchlist = new Watchlist({
 		el: '#watchlist',
+		template: `<li class="sneaker"><%= name %></li>`,
+		collections: [ watchlistCollection ],
+	});
+
+	let watchlistMini = new Watchlist({
+		el: '#watchlist-mini',
 		template: `<li class="sneaker"><%= name %></li>`,
 		collections: [ watchlistCollection ],
 	});
@@ -352,7 +424,7 @@
 	let search = new Search;
 
 	search.bindEvents({
-		bindings: [ sneakers ],
+		bindings: [ sneakers, overlay ],
 	});
 
 	
@@ -366,12 +438,13 @@
 	// localStorage but any adapter should have the same
 	// interface -- maybe use backbone for this part?
 
-	
+	overlay.render({show: false});
 	sneakers.render();
 	search.render();
 	watchlist.render();
+	watchlistMini.render();
 
-	clone();
+	//clone();
 
 	// probably want to render things only certain route
 	const router = route({
