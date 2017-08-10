@@ -64,6 +64,7 @@ p {
 .video {
 	float: none;
 	margin-right: 0;
+	min-height: 368px;
 	max-width: 326px;
 	width: 100%;
 }
