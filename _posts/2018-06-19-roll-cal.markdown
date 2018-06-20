@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "RollCal"
+date:   2018-06-19 10:29:51 -0400
+categories: jekyll update
+permalink: /roll-cal/
+type: experiment
+description: RollCal is an app that can be used to make big tasks with milestones easy to create, track, and manage
+---
+## What is it?
+
+RollCal is an easy task management app. It is mostly for tasks that have multiple steps with different due dates.
+
+You can either create a task from scratch or duplicate an existing task from a template. Once the task is created with a  due date, you can add sub-tasks (milestones). These can have language like “one week before” or “the day of” and the app should be smart enough to set the milestone due date.
+
+Once all your milestones are set, reminders can go out at intervals related to the milestones. Incomplete tasks can automatically roll over to the next milestone or they can block further milestones. It all depends on how you want to use the app. 
+
+As an MVP, one user can access a task but certainly there would be benefit to having others subscribe to and be assigned tasks or milestones to complete.
+
+## What kind of tasks can this be used for?
+Tasks that are due in the future with multiple pre-task items are a great fit. Tasks like moving, wedding, college applications, project management - many task types. And with the templates, creating new tasks and customizing tasks will be very quick and easy.
+
+### 6/19 Screen Roughs
+
+#### Web Home
+![Alt text]({{ '/img/web-boards.png' }})
+
+#### Web New Task (Search)
+![Alt text]({{ '/img/web-add - search.png' }})
+
+#### Web New Task (Edit)
+![Alt text]({{ '/img/web-add.png' }})
