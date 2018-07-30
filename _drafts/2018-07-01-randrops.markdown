@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Randrops"
+date:   2018-07-01 10:29:51 -0400
+categories: jekyll update
+permalink: /randrops/
+type: experiment
+description: A drop in JavaScript or React animation component
+---
+## What is this?
+
+A drop in JavaScript or React animation component animating a bunch of DOM elements dropping into a canvas, each one bouncing until "gravity" causes it to stop.
+
+## Github/Codepen
+
+Github and codepen demo links are here
+
+### 7/01 Screen Roughs
+
+#### Showing flow and states
+![Alt text]({{ '/img/randrops.png' }})
