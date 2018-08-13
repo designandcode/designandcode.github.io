@@ -121,3 +121,13 @@ p {
 .larger-images img {
 	width: 100%;
 }
+
+.portfolio-tile-game {
+	border: none;
+	padding-top: 5px;
+}
+
+.portfolio-tile-game-refresh {
+	width: 20px; 
+	vertical-align: text-bottom;
+}
